@@ -1,0 +1,59 @@
+<div class="rating-stars" data-post-title="{{ page.title }}">
+  <strong>Enjoyed this post? Rate it! </strong>
+  <span class="star" data-value="1">&#9733;</span>
+  <span class="star" data-value="2">&#9733;</span>
+  <span class="star" data-value="3">&#9733;</span>
+  <span class="star" data-value="4">&#9733;</span>
+  <span class="star" data-value="5">&#9733;</span>
+  <span id="thanks-msg" style="display:none; margin-left:10px; color:green;">Thanks for rating!</span>
+</div>
+
+<style>
+.rating-stars {
+  font-size: 1.4rem;
+  color:lightcoral;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+.rating-stars .star:hover,
+.rating-stars .star:hover ~ .star {
+  color: #ccc;
+}
+.rating-stars .star.selected,
+.rating-stars .star:hover {
+  color: gold;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const stars = document.querySelectorAll('.rating-stars .star');
+  const thanksMsg = document.getElementById('thanks-msg');
+  const postTitle = document.querySelector('.rating-stars').getAttribute('data-post-title');
+
+  stars.forEach(star => {
+    star.addEventListener('click', function () {
+      const rating = this.getAttribute('data-value');
+      const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeKOwRPwSHLzSCr46hOMTvaBfC4XYOS1KlpRxX6nTL9Y0cggQ/formResponse';
+      const ratingField = 'entry.1373542740'; // 🔁 Replace with your actual rating entry ID
+      const titleField = 'entry.636571047';  // 🔁 Replace with your actual post title entry ID
+
+      const formData = new FormData();
+      formData.append(ratingField, rating);
+      formData.append(titleField, postTitle);
+
+      fetch(formURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
+        stars.forEach(s => s.classList.remove('selected'));
+        this.classList.add('selected');
+        thanksMsg.style.display = 'inline';
+      });
+    });
+  });
+});
+</script>
+

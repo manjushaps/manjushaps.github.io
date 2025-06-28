@@ -1,0 +1,12 @@
+title: Techn0tz
+description: Empowering self-learners through clean, beginner-friendly tutorials on Git, Jekyll, and more.
+remote_theme: pages-themes/dinky
+url: "https://manjushaps.github.io"
+baseurl: "/Techn0tz"
+author: Manjushaps
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  
