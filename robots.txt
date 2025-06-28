@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://manjushaps.github.io/Techn0tz/sitemap.xml
+Sitemap: https://manjushaps.github.io/sitemap.xml
