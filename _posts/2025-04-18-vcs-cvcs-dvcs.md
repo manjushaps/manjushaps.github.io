@@ -5,6 +5,8 @@ date: 2025-04-18
 author: manjushaps
 categories: VCS and DVCS
 tags: [Git, Git Series, Version Control, DVCS, Beginners]
+redirect_from:
+  - /vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs/
 ---
 
 In the fast-paced world of software development, change is constant. Developers write, rewrite, test, and refine code every day. Without a system to manage those changes, projects would quickly become chaotic. That’s where **Version Control Systems (VCS)** come in.

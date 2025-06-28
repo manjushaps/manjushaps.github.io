@@ -5,6 +5,9 @@ date: 2025-06-13
 author: manjushaps
 categories: Book
 tags: [Meditations, Stoicism, Philosophy, Book Two, Wisdom, Inner Life]
+redirect_from:
+  - /book/2025/06/13/Book-Series-Book-2/
+
 ---
 
 # 📃Introduction

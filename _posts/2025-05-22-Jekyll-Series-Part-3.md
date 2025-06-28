@@ -5,6 +5,8 @@ date: 2025-05-22
 author: manjushaps
 categories: Jekyll
 tags: [Jekyll, GitHub Pages, Deployment, Static Site, Hosting, Git]
+redirect_from:
+  - /jekyll/2025/05/22/Jekyll-Series-Part-3/
 ---
 
 ## 🔗 Missed Part-1 and Part-2?

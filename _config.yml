@@ -4,9 +4,11 @@ remote_theme: pages-themes/dinky
 url: "https://manjushaps.github.io"
 baseurl: ""
 author: Manjushaps
+permalink: /:title/
 
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-redirect-from
   

@@ -5,6 +5,8 @@ date: 2025-05-02
 author: manjushaps
 categories: Git 
 tags: [Git, Git Series, Branching, Merging, Workflow]
+redirect_from:
+  - /git/2025/05/02/Git-Series-Part-3/
 ---
 
 # 📁How Git stores Data?

@@ -5,6 +5,8 @@ date: 2025-06-19
 author: manjushaps
 categories: [Jekyll , Deployment]
 tags: [Netlify, Jekyll, GitHub, Custom Domain, HTTPS, JAMstack, Static Sites, Self Learner]
+redirect_from:
+  - /jekyll/deployment/2025/06/19/Jekyll-Series-GitHub-Netlify/
 ---
 
 # 📄 Introduction

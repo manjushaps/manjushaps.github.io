@@ -5,6 +5,8 @@ date: 2025-04-25
 author: manjushaps
 categories: Git 
 tags: [Git Series, Git, GitHub, Remote Repository, Workflow]
+redirect_from:
+  - /git/2025/04/25/Git-Series-Part-2/
 ---
 
 ## 🔗 Missed Part-1 ?

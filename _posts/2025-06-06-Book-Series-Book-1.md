@@ -5,6 +5,8 @@ date: 2025-06-06
 author: manjushaps
 categories: Book
 tags: [Meditations, Stoicism, Philosophy, Book One, Self-Reflection, Marcus Aurelius]
+redirect_from:
+  - /book/2025/06/06/Book-Series-Book-1/
 ---
 
 # 📃Introduction
