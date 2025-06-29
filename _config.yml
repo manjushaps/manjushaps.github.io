@@ -3,7 +3,7 @@ description: Empowering self-learners through clean, beginner-friendly tutorials
 remote_theme: pages-themes/dinky
 url: "https://manjushaps.github.io"
 baseurl: ""
-author: Manjushaps
+author: manjushaps
 permalink: /:title/
 
 plugins:
