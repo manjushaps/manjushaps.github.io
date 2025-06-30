@@ -7,6 +7,7 @@ categories: Git
 tags: [Git, Git Series, Version Control, Local Repository, Beginners]
 redirect_from:
   - /git/2025/04/25/Git-Series-Part-1/
+  - /git/2025/04/25/Git-Series-Part-1.html
 ---
 
 # 🚀 From VCS to Git
