@@ -78,6 +78,17 @@ blockquote p {
   color: #b03060;
 }
 
+/*Try it yourself*/
+.try-box {
+  border-left: 4px solid #f97316; /* Rust orange */
+  background-color: #fffdf7;
+  padding: 1em 1.2em;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+}
 
 
 

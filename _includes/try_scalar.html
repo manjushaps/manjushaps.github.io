@@ -1,0 +1,41 @@
+<div class="try-box">
+  <p><strong>💡 Challenge:</strong> <br>
+    Inside <code>fn main()</code>, take two numbers (integers) as input from the user. <br>
+    Then calculate and print their <strong>sum</strong>.</p>
+
+  <p>⏳ Hint: Use <code>read_line</code>, <code>trim</code>, <code>parse</code>, and <code>let</code>.</p>
+
+  <p>⏳ Try writing this on your own before you look at the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+  <summary 
+    style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+    onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+    onmouseout="this.style.color='#222'; this.style.background='transparent';">
+    ✅ Show Solution
+  </summary>
+    <pre><code class="language-rust">use std::io;
+
+fn main() {
+    let mut a = String::new();
+    let mut b = String::new();
+
+    println!("Enter first number:");
+    io::stdin().read_line(&mut a).expect("Failed to read");
+    println!("Enter second number:");
+    io::stdin().read_line(&mut b).expect("Failed to read");
+
+    let a: i32 = a.trim().parse().expect("Not a number");
+    let b: i32 = b.trim().parse().expect("Not a number");
+
+    let sum = a + b;
+    println!("Sum is: {}", sum);    }</code></pre>
+  </details>
+    
+ <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20std%3A%3Aio%3B%0A%0Afn%20main()%20%7B%0A%20%20%20%20let%20mut%20a%20%3D%20String%3A%3Anew()%3B%0A%20%20%20%20let%20mut%20b%20%3D%20String%3A%3Anew()%3B%0A%0A%20%20%20%20println!(%22Enter%20first%20number%3A%22)%3B%0A%20%20%20%20io%3A%3Astdin().read_line(%26mut%20a).expect(%22Failed%20to%20read%22)%3B%0A%20%20%20%20println!(%22Enter%20second%20number%3A%22)%3B%0A%20%20%20%20io%3A%3Astdin().read_line(%26mut%20b).expect(%22Failed%20to%20read%22)%3B%0A%0A%20%20%20%20let%20a%3A%20i32%20%3D%20a.trim().parse().expect(%22Not%20a%20number%22)%3B%0A%20%20%20%20let%20b%3A%20i32%20%3D%20b.trim().parse().expect(%22Not%20a%20number%22)%3B%0A%0A%20%20%20%20let%20sum%20%3D%20a%20%2B%20b%3B%0A%20%20%20%20println!(%22Sum%20is%3A%20%7B%7D%22%2C%20sum)%3B%0A%7D" 
+    style="color: #dc2626; font-weight: bold;" target="_blank">Try it on Rust Playground</a>
+  </p>
+
+  <p style="font-size: 0.85em; opacity: 0.7;">💻 Works best in desktop view</p> 
+</div>

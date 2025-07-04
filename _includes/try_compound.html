@@ -1,0 +1,32 @@
+<div class="try-box">
+  <p><strong>💡 Challenge:</strong> <br>
+    Create a <strong>tuple</strong> to store your name (as <code>&str</code>) and your age (as <code>i32</code>).<br>
+    Then create an <strong>array</strong> of 3 numbers. <br>
+    Print both using <code>println!</code>.</p>
+
+  <p>⏳ Hint: Use <code>let person = ("Alice", 30);</code> and <code>let numbers = [1, 2, 3];</code></p>
+
+  <p>⏳ Try writing this on your own before you look at the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+  <summary 
+    style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+    onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+    onmouseout="this.style.color='#222'; this.style.background='transparent';">
+    ✅ Show Solution
+  </summary>
+    <pre><code class="language-rust">fn main() {
+    let person = ("Alice", 30);
+    let numbers = [1, 2, 3];
+
+    println!("Name: {}, Age: {}", person.0, person.1);
+    println!("Numbers: {:?}", numbers);}</code></pre>
+  </details>
+    
+ <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=fn%20main()%20%7B%0A%20%20%20%20let%20person%20%3D%20(%22Alice%22%2C%2030)%3B%0A%20%20%20%20let%20numbers%20%3D%20%5B1%2C%202%2C%203%5D%3B%0A%0A%20%20%20%20println!(%22Name%3A%20%7B%7D%2C%20Age%3A%20%7B%7D%22%2C%20person.0%2C%20person.1)%3B%0A%20%20%20%20println!(%22Numbers%3A%20%7B%3A%3F%7D%22%2C%20numbers)%3B%0A%7D" 
+    style="color: #dc2626; font-weight: bold;" target="_blank">Try it on Rust Playground</a>
+  </p>
+
+  <p style="font-size: 0.85em; opacity: 0.7;">💻 Works best in desktop view</p> 
+</div>
