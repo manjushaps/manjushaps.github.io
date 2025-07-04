@@ -299,7 +299,7 @@ In this post, you:
  - Learned how to avoid common beginner errors
 But this is just the beginning.
 
-> Don’t miss the next post on Techn0tz — we’ll break down Rust’s most powerful ideas: **ownership, borrowing, and immutability**, made simple for beginners.
+> Don’t miss the next post on 🚀**Techn0tz** — we’ll break down Rust’s most powerful ideas: **variables, mutability, and data types**, made simple for beginners.
 
 ***Stay Tuned!***
 
