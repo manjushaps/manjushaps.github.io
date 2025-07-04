@@ -5,7 +5,6 @@ date: 2025-05-15
 author: manjushaps
 categories: Jekyll
 tags: [Jekyll, Local Development, Blogging, Preview Site, CLI, Jekyll Basics]
-permalink: /Jekyll-Series-Part-2/
 redirect_from:
   - /jekyll/2025/05/15/Jekyll-Series-Part-2/
 ---
