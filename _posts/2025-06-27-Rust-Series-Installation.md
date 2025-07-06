@@ -299,7 +299,7 @@ In this post, you:
  - Learned how to avoid common beginner errors
 But this is just the beginning.
 
-> Don’t miss the next post on 🚀**Techn0tz** — we’ll break down Rust’s most powerful ideas: **variables, mutability, and data types**, made simple for beginners.
+> Ready to write real Rust code? **[Dive into Rust Basics on Techn0tz – Variables, Mutability & Data Types made simple](https://manjushaps.github.io/Rust-Series-Foundations/)**— your setup is done, now let's start coding!
 
 ***Stay Tuned!***
 
