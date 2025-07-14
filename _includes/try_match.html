@@ -1,0 +1,104 @@
+<div class="try-box">
+  <p><strong>💡 Challenge 1: 🗓️ Month Number to Name</strong> <br>
+    Ask the user to enter a month number (1 to 12). Use a <code>match</code> expression to print the full month name.<br>
+    For anything outside 1–12, display <strong>"Invalid month"</strong>.
+  </p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">use std::io;
+
+fn main() {
+    println!("Enter the month number (1–12):");
+    let mut m = String::new();
+    io::stdin().read_line(&mut m).expect("Failed to read input");
+
+    let m: u32 = match m.trim().parse() {
+        Ok(num) => num,
+        Err(_) => {
+            println!("❌ Please enter a valid number.");
+            return;
+        }
+    };
+
+    let month = match m {
+        1 => "January",
+        2 => "February",
+        3 => "March",
+        4 => "April",
+        5 => "May",
+        6 => "June",
+        7 => "July",
+        8 => "August",
+        9 => "September",
+        10 => "October",
+        11 => "November",
+        12 => "December",
+        _ => "Invalid month!",
+    };
+
+    println!("📅 Month: {}", month);
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20std%3A%3Aio%3B%0A%0Afn%20main%28%29%20%7B%0A%20%20%20%20println%21%28%22Enter%20the%20month%20number%20%281%E2%80%9312%29%3A%22%29%3B%0A%20%20%20%20let%20mut%20m%20%3D%20String%3A%3Anew%28%29%3B%0A%20%20%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20m%29.expect%28%22Failed%20to%20read%20input%22%29%3B%0A%0A%20%20%20%20let%20m%3A%20u32%20%3D%20match%20m.trim%28%29.parse%28%29%20%7B%0A%20%20%20%20%20%20%20%20Ok%28num%29%20%3D%3E%20num%2C%0A%20%20%20%20%20%20%20%20Err%28_%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%E2%9D%8C%20Please%20enter%20a%20valid%20number.%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%3B%0A%0A%20%20%20%20let%20month%20%3D%20match%20m%20%7B%0A%20%20%20%20%20%20%20%201%20%3D%3E%20%22January%22%2C%0A%20%20%20%20%20%20%20%202%20%3D%3E%20%22February%22%2C%0A%20%20%20%20%20%20%20%203%20%3D%3E%20%22March%22%2C%0A%20%20%20%20%20%20%20%204%20%3D%3E%20%22April%22%2C%0A%20%20%20%20%20%20%20%205%20%3D%3E%20%22May%22%2C%0A%20%20%20%20%20%20%20%206%20%3D%3E%20%22June%22%2C%0A%20%20%20%20%20%20%20%207%20%3D%3E%20%22July%22%2C%0A%20%20%20%20%20%20%20%208%20%3D%3E%20%22August%22%2C%0A%20%20%20%20%20%20%20%209%20%3D%3E%20%22September%22%2C%0A%20%20%20%20%20%20%20%2010%20%3D%3E%20%22October%22%2C%0A%20%20%20%20%20%20%20%2011%20%3D%3E%20%22November%22%2C%0A%20%20%20%20%20%20%20%2012%20%3D%3E%20%22December%22%2C%0A%20%20%20%20%20%20%20%20_%20%3D%3E%20%22Invalid%20month%21%22%2C%0A%20%20%20%20%7D%3B%0A%0A%20%20%20%20println%21%28%22%F0%9F%93%85%20Month%3A%20%7B%7D%22%2C%20month%29%3B%0A%7D%0A"
+  target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+
+  <hr style="margin: 2em 0; border: none; border-top: 1px solid #eee;" />
+
+  <p><strong>💡 Challenge 2: ✔️ Language Selector</strong> <br> 
+    Ask the user for their name and preferred language.<br>
+    Use <code>match</code> to print a personalized greeting like <strong>வணக்கம் Ravi</strong> or <strong>Hola Aisha</strong>.<br>
+    Hint: Combine <code>trim()</code>, <code>to_lowercase()</code>, and <code>println!</code> to make the message dynamic.
+  </p> 
+
+  <p>⏳ Try writing this on your own before looking at the solution!</p> 
+    
+  <details style="margin-top: 0.8em;"> 
+     <summary 
+        style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;" 
+        onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+        onmouseout="this.style.color='#222'; this.style.background='transparent';"> 
+        ✅ Show Solution
+     </summary> <pre><code class="language-rust">use std::io;
+
+fn main() {
+    // Step 1: Ask for user's name
+    println!("🧑‍💻 Enter your name:");
+    let mut name = String::new();
+    io::stdin().read_line(&mut name).expect("Failed to read name");
+    let name = name.trim(); // Clean up newline
+
+    // Step 2: Ask for preferred language
+    println!("🌐 Choose a language (tamil, malayalam, hindi, french, spanish):");
+    let mut lang_input = String::new();
+    io::stdin().read_line(&mut lang_input).expect("Failed to read input");
+    let lang = lang_input.trim().to_lowercase();
+
+    // Step 3: Match input and print greeting
+    match lang.as_str() {
+        "tamil" => println!("👋 வணக்கம் {}!", name),
+        "malayalam" => println!("👋 നമസ്കാരം {}!", name),
+        "hindi" => println!("👋 नमस्ते {}!", name),
+        "french" => println!("👋 Bonjour {}!", name),
+        "spanish" => println!("👋 Hola {}!", name),
+        _ => println!("⚠️ Sorry, I don't know that language yet, {}!", name),
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20std%3A%3Aio%3B%0A%0Afn%20main%28%29%20%7B%0A%20%20%20%20%2F%2F%20Step%201%3A%20Ask%20for%20user%27s%20name%0A%20%20%20%20println%21%28%22%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB%20Enter%20your%20name%3A%22%29%3B%0A%20%20%20%20let%20mut%20name%20%3D%20String%3A%3Anew%28%29%3B%0A%20%20%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20name%29.expect%28%22Failed%20to%20read%20name%22%29%3B%0A%20%20%20%20let%20name%20%3D%20name.trim%28%29%3B%20%2F%2F%20Clean%20up%20newline%0A%0A%20%20%20%20%2F%2F%20Step%202%3A%20Ask%20for%20preferred%20language%0A%20%20%20%20println%21%28%22%F0%9F%8C%90%20Choose%20a%20language%20%28tamil%2C%20malayalam%2C%20hindi%2C%20french%2C%20spanish%29%3A%22%29%3B%0A%20%20%20%20let%20mut%20lang_input%20%3D%20String%3A%3Anew%28%29%3B%0A%20%20%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20lang_input%29.expect%28%22Failed%20to%20read%20input%22%29%3B%0A%20%20%20%20let%20lang%20%3D%20lang_input.trim%28%29.to_lowercase%28%29%3B%0A%0A%20%20%20%20%2F%2F%20Step%203%3A%20Match%20input%20and%20print%20greeting%0A%20%20%20%20match%20lang.as_str%28%29%20%7B%0A%20%20%20%20%20%20%20%20%22tamil%22%20%3D%3E%20println%21%28%22%F0%9F%91%8B%20%E0%AE%B5%E0%AE%A3%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%AE%E0%AF%8D%20%7B%7D%21%22%2C%20name%29%2C%0A%20%20%20%20%20%20%20%20%22malayalam%22%20%3D%3E%20println%21%28%22%F0%9F%91%8B%20%E0%B4%A8%E0%B4%AE%E0%B4%B8%E0%B5%8D%E0%B4%95%E0%B4%BE%E0%B4%B0%E0%B4%82%20%7B%7D%21%22%2C%20name%29%2C%0A%20%20%20%20%20%20%20%20%22hindi%22%20%3D%3E%20println%21%28%22%F0%9F%91%8B%20%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%7B%7D%21%22%2C%20name%29%2C%0A%20%20%20%20%20%20%20%20%22french%22%20%3D%3E%20println%21%28%22%F0%9F%91%8B%20Bonjour%20%7B%7D%21%22%2C%20name%29%2C%0A%20%20%20%20%20%20%20%20%22spanish%22%20%3D%3E%20println%21%28%22%F0%9F%91%8B%20Hola%20%7B%7D%21%22%2C%20name%29%2C%0A%20%20%20%20%20%20%20%20_%20%3D%3E%20println%21%28%22%E2%9A%A0%EF%B8%8F%20Sorry%2C%20I%20don%27t%20know%20that%20language%20yet%2C%20%7B%7D%21%22%2C%20name%29%2C%0A%20%20%20%20%7D%0A%7D"
+  target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>
+

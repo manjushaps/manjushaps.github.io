@@ -1,0 +1,102 @@
+<div class="try-box">
+  <p><strong>💡 Challenge 1: 🛒 Cart Total Until Budget</strong> <br>
+    Ask the user to keep entering item prices. Stop when the total exceeds ₹1000. Use a <code>while</code> loop to accumulate and break once the budget is crossed. Track the number of items too!
+  </p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">use std::io;
+
+fn main() {
+    let mut t = 0.0; //t: total
+    let mut c = 0;  //c: count
+
+    println!("🛒 Add item prices to your cart (budget: ₹1000)");
+
+    while t <= 1000.0 {
+        let mut x = String::new(); 
+        println!("Enter price of item {}:", c + 1);
+        io::stdin().read_line(&mut x).expect("Failed to read input");
+
+        let y: f32 = match x.trim().parse() { //y: price
+            Ok(p) => p,
+            Err(_) => {
+                println!("⚠️ Please enter a valid number.");
+                continue;
+            }
+        };
+        t += y;
+        c += 1;
+        println!("✅ Item added. Current total: ₹{:.2}",  t);
+    }
+    println!("\n💸 Budget exceeded! You added {} items. Final total: ₹{:.2}", c, t);
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20std%3A%3Aio%3B%0A%0Afn%20main%28%29%20%7B%0A%20%20%20%20let%20mut%20t%20%3D%200.0%3B%20%2F%2Ft%3A%20total%0A%20%20%20%20let%20mut%20c%20%3D%200%3B%20%20%2F%2Fc%3A%20count%0A%0A%20%20%20%20println%21%28%22%F0%9F%9B%92%20Add%20item%20prices%20to%20your%20cart%20%28budget%3A%20%E2%82%B91000%29%22%29%3B%0A%0A%20%20%20%20while%20t%20%3C%3D%201000.0%20%7B%0A%20%20%20%20%20%20%20%20let%20mut%20x%20%3D%20String%3A%3Anew%28%29%3B%20%0A%20%20%20%20%20%20%20%20println%21%28%22Enter%20price%20of%20item%20%7B%7D%3A%22%2C%20c%20%2B%201%29%3B%0A%20%20%20%20%20%20%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20x%29.expect%28%22Failed%20to%20read%20input%22%29%3B%0A%0A%20%20%20%20%20%20%20%20let%20y%3A%20f32%20%3D%20match%20x.trim%28%29.parse%28%29%20%7B%20%2F%2Fy%3A%20price%0A%20%20%20%20%20%20%20%20%20%20%20%20Ok%28p%29%20%3D%3E%20p%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20Err%28_%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%E2%9A%A0%EF%B8%8F%20Please%20enter%20a%20valid%20number.%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20continue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%3B%0A%0A%20%20%20%20%20%20%20%20t%20%2B%3D%20y%3B%0A%20%20%20%20%20%20%20%20c%20%2B%3D%201%3B%0A%20%20%20%20%20%20%20%20println%21%28%22%E2%9C%85%20Item%20added.%20Current%20total%3A%20%E2%82%B9%7B%3A.2%7D%22%2C%20%20t%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20println%21%28%22%5Cn%F0%9F%92%B8%20Budget%20exceeded%21%20You%20added%20%7B%7D%20items.%20Final%20total%3A%20%E2%82%B9%7B%3A.2%7D%22%2C%20c%2C%20t%29%3B%0A%7D" 
+  target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+
+  <hr style="margin: 2em 0; border: none; border-top: 1px solid #eee;" />
+
+  <p><strong>💡 Challenge 2: 🔐 Secret Number Guessing Game</strong> <br> 
+     <p>Use a <code>loop</code> and <code>rand::gen_range()</code> to generate a secret number between 1 and 20. Let the user keep guessing until they get it right. Give hints like "Too high" or "Too low" after each guess. Track the number of attempts. Can you guess it in under 5 tries?</p>
+  </p> 
+
+  <p>⏳ Try writing this on your own before looking at the solution!</p> 
+    
+  <details style="margin-top: 0.8em;"> 
+     <summary 
+        style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;" 
+        onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+        onmouseout="this.style.color='#222'; this.style.background='transparent';"> 
+        ✅ Show Solution
+     </summary> <pre><code class="language-rust">use rand::Rng;
+use std::io;
+
+fn main() {
+    let s = rand::thread_rng().gen_range(1..=20);  //s: secret_number
+    let mut a = 0;  //a: attempts
+
+    println!("🎯 Guess the secret number (1–20)");
+
+    loop {
+        let mut g = String::new(); //g: guess
+        println!("Enter your guess:");
+        io::stdin().read_line(&mut g).expect("Failed to read");
+
+        let g: u32 = match g.trim().parse() {
+            Ok(num) => num,
+            Err(_) => {
+                println!("⚠️ Please enter a valid number.");
+                continue;
+            }
+        };
+
+        a += 1;
+
+        if g < s {
+            println!("🔻 Too low! Try again.");
+        } else if g > s {
+            println!("🔺 Too high! Try again.");
+        } else {
+            println!("🎉 Correct! You guessed it in {} attempts.", a);
+            break;
+        }
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20rand%3A%3ARng%3B%0Ause%20std%3A%3Aio%3B%0A%0Afn%20main%28%29%20%7B%0A%20%20%20%20let%20s%20%3D%20rand%3A%3Athread_rng%28%29.gen_range%281..%3D20%29%3B%20%20%2F%2Fs%3A%20secret_number%0A%20%20%20%20let%20mut%20a%20%3D%200%3B%20%20%2F%2Fa%3A%20attempts%0A%0A%20%20%20%20println%21%28%22%F0%9F%8E%AF%20Guess%20the%20secret%20number%20%281%E2%80%9320%29%22%29%3B%0A%0A%20%20%20%20loop%20%7B%0A%20%20%20%20%20%20%20%20let%20mut%20g%20%3D%20String%3A%3Anew%28%29%3B%20%2F%2Fg%3A%20guess%0A%20%20%20%20%20%20%20%20println%21%28%22Enter%20your%20guess%3A%22%29%3B%0A%20%20%20%20%20%20%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20g%29.expect%28%22Failed%20to%20read%22%29%3B%0A%0A%20%20%20%20%20%20%20%20let%20g%3A%20u32%20%3D%20match%20g.trim%28%29.parse%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20Ok%28num%29%20%3D%3E%20num%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20Err%28_%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%E2%9A%A0%EF%B8%8F%20Please%20enter%20a%20valid%20number.%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20continue%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%3B%0A%0A%20%20%20%20%20%20%20%20a%20%2B%3D%201%3B%0A%0A%20%20%20%20%20%20%20%20if%20g%20%3C%20s%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%F0%9F%94%BB%20Too%20low%21%20Try%20again.%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20if%20g%20%3E%20s%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%F0%9F%94%BA%20Too%20high%21%20Try%20again.%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%F0%9F%8E%89%20Correct%21%20You%20guessed%20it%20in%20%7B%7D%20attempts.%22%2C%20a%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20break%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D"
+  target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

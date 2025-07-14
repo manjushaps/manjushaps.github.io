@@ -1,0 +1,87 @@
+<div class="try-box">
+  <p><strong>💡 Challenge 1: 🔢 Odd or Even Checker</strong> <br>
+    Ask the user for a number and print whether it's <strong>Odd</strong> or <strong>Even</strong>.
+  </p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">use std::io;
+fn main() {
+   println!("Enter a number :");
+   let mut n = String::new();
+   io::stdin().read_line(&mut n).expect("Failed to read input");
+   let n: i32 = n.trim().parse().expect("Please enter a valid number");
+   
+   if n % 2 == 0{
+       println!("The number {n} is Even");
+    } else {
+       println!("The number {n} is Odd");
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20std%3A%3Aio%3B%0Afn%20main%28%29%20%7B%0A%20%20%20%20println%21%28%22Enter%20a%20number%20%3A%22%29%3B%0A%20%20%20%20let%20mut%20n%20%3D%20String%3A%3Anew%28%29%3B%0A%20%20%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20n%29.expect%28%22Failed%20to%20read%20input%22%29%3B%0A%20%20%20%20let%20n%3A%20i32%20%3D%20n.trim%28%29.parse%28%29.expect%28%22Please%20enter%20a%20valid%20number%22%29%3B%0A%0A%20%20%20%20if%20n%20%25%202%20%3D%3D%200%7B%0A%20%20%20%20%20%20%20%20println%21%28%22The%20number%20%7Bn%7D%20is%20Even%22%29%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20println%21%28%22The%20number%20%7Bn%7D%20is%20Odd%22%29%3B%0A%20%20%20%20%7D%0A%7D" 
+  target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+
+  <hr style="margin: 2em 0; border: none; border-top: 1px solid #eee;" />
+
+  <p><strong>💡 Challenge 2: 📦 Shipping Fee Calculator</strong> <br> 
+    Ask the user for: <strong> Order amount in ₹ , Delivery distance in km </strong>.Then apply the nested <code>if</code> logic shown above to print the shipping fee. 
+  </p> 
+
+  <p>⏳ Try writing this on your own before looking at the solution!</p> 
+    
+  <details style="margin-top: 0.8em;"> 
+    <summary 
+        style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;" 
+        onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+        onmouseout="this.style.color='#222'; this.style.background='transparent';"> 
+        ✅ Show Solution
+    </summary> <pre><code class="language-rust">use std::io;
+fn main() {
+  println!("Enter the order amount :");
+  let mut amt = String::new();
+  io::stdin().read_line(&mut amt).expect("Failed to read line");
+  let amt: i32 = amt.trim().parse().expect("Please enter a valid number");
+  
+  println!("Enter the distance in Km :");
+  let mut dist = String::new();
+  io::stdin().read_line(&mut dist).expect("Failed to read line");
+  let dist: i32 = dist.trim().parse().expect("Please enter a valid number");
+  
+  if amt > 500 {
+        if dist <= 10 {
+            println!("Free shipping 🚚");
+        } else {
+            println!("Shipping Fee: ₹20");
+        }
+    } else if amt >= 200 {
+        if dist <= 10 {
+            println!("Shipping Fee: ₹50");
+        } else {
+            println!("Shipping Fee: ₹70");
+        }
+    } else {
+        if dist <= 10 {
+            println!("Shipping Fee: ₹100");
+        } else {
+            println!("Shipping Fee: ₹120");
+        }
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20std%3A%3Aio%3B%0Afn%20main%28%29%20%7B%0A%20%20println%21%28%22Enter%20the%20order%20amount%20%3A%22%29%3B%0A%20%20let%20mut%20amt%20%3D%20String%3A%3Anew%28%29%3B%0A%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20amt%29.expect%28%22Failed%20to%20read%20line%22%29%3B%0A%20%20let%20amt%3A%20i32%20%3D%20amt.trim%28%29.parse%28%29.expect%28%22Please%20enter%20a%20valid%20number%22%29%3B%0A%20%20%0A%20%20println%21%28%22Enter%20the%20distance%20in%20Km%20%3A%22%29%3B%0A%20%20let%20mut%20dist%20%3D%20String%3A%3Anew%28%29%3B%0A%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20dist%29.expect%28%22Failed%20to%20read%20line%22%29%3B%0A%20%20let%20dist%3A%20i32%20%3D%20dist.trim%28%29.parse%28%29.expect%28%22Please%20enter%20a%20valid%20number%22%29%3B%0A%20%20%0A%20%20if%20amt%20%3E%20500%20%7B%0A%20%20%20%20%20%20%20%20if%20dist%20%3C%3D%2010%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22Free%20shipping%20%F0%9F%9A%9A%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22Shipping%20Fee%3A%20%E2%82%B920%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%20else%20if%20amt%20%3E%3D%20200%20%7B%0A%20%20%20%20%20%20%20%20if%20dist%20%3C%3D%2010%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22Shipping%20Fee%3A%20%E2%82%B950%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22Shipping%20Fee%3A%20%E2%82%B970%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20if%20dist%20%3C%3D%2010%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22Shipping%20Fee%3A%20%E2%82%B9100%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22Shipping%20Fee%3A%20%E2%82%B9120%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D"
+ target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

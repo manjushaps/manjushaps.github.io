@@ -295,7 +295,7 @@ This program takes marks in three subjects as input:
 
 ---
 
-# Conclusion – What You’ve Learned So Far
+# 🎯 Conclusion – What You’ve Learned So Far
 
 You’ve now taken your first solid steps into Rust — and tackled some of its most essential building blocks:
 

@@ -1,0 +1,75 @@
+<div class="try-box">
+  <p><strong>💡 Challenge 1: ✖️ Generate Multiples of a Number</strong> <br>
+    Ask the user to enter a number (like 7) 
+    Use a <code>for</code> loop to display: 7, 14, 21, ..., up to 12 times.<br>
+    Can you format the output horizontally or show it in a table?
+  </p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">use std::io;
+
+fn main() {
+    let mut n = String::new();
+    let c = 12;
+
+    println!("Enter a number to generate its multiples:");
+    io::stdin().read_line(&mut n).expect("Failed to read input");
+    let n: u32 = n.trim().parse().expect("Please enter a valid number");
+
+    println!("\n📈 First {} multiples of {}:", c, n);
+    for i in 1..=c {
+        println!("{} × {} = {}", n, i, n * i);
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20std%3A%3Aio%3B%0A%0Afn%20main%28%29%20%7B%0A%20%20%20%20let%20mut%20n%20%3D%20String%3A%3Anew%28%29%3B%0A%20%20%20%20let%20c%20%3D%2012%3B%0A%0A%20%20%20%20println%21%28%22Enter%20a%20number%20to%20generate%20its%20multiples%3A%22%29%3B%0A%20%20%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20n%29.expect%28%22Failed%20to%20read%20input%22%29%3B%0A%20%20%20%20let%20n%3A%20u32%20%3D%20n.trim%28%29.parse%28%29.expect%28%22Please%20enter%20a%20valid%20number%22%29%3B%0A%0A%20%20%20%20println%21%28%22%5Cn%F0%9F%93%88%20First%20%7B%7D%20multiples%20of%20%7B%7D%3A%22%2C%20c%2C%20n%29%3B%0A%20%20%20%20for%20i%20in%201..%3Dc%20%7B%0A%20%20%20%20%20%20%20%20println%21%28%22%7B%7D%20%C3%97%20%7B%7D%20%3D%20%7B%7D%22%2C%20n%2C%20i%2C%20n%20%2A%20i%29%3B%0A%20%20%20%20%7D%0A%7D" 
+  target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+
+  <hr style="margin: 2em 0; border: none; border-top: 1px solid #eee;" />
+
+  <p><strong>💡 Challenge 2: 🎯 FizzBuzz – Classic Loop Challenge</strong> <br> 
+    Print numbers from 1 to 20. If divisible by 3, print <code>Fizz</code>; if divisible by 5, print <code>Buzz</code>; and for both, print <code>FizzBuzz</code>.<br>
+    Use a <code>for</code> loop with <code>if-else</code> conditions.
+  </p> 
+
+  <p>⏳ Try writing this on your own before looking at the solution!</p> 
+    
+  <details style="margin-top: 0.8em;"> 
+     <summary 
+        style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;" 
+        onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+        onmouseout="this.style.color='#222'; this.style.background='transparent';"> 
+        ✅ Show Solution
+     </summary> <pre><code class="language-rust">fn main() {
+    println!("🎲 FizzBuzz from 1 to 20:");
+
+    for i in 1..=20 {
+        if i % 3 == 0 && i % 5 == 0 {
+            println!("{} → FizzBuzz", i);
+        } else if i % 3 == 0 {
+            println!("{} → Fizz", i);
+        } else if i % 5 == 0 {
+            println!("{} → Buzz", i);
+        } else {
+            println!("{}", i);
+        }
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=fn%20main%28%29%20%7B%0A%20%20%20%20println%21%28%22%F0%9F%8E%B2%20FizzBuzz%20from%201%20to%2020%3A%22%29%3B%0A%0A%20%20%20%20for%20i%20in%201..%3D20%20%7B%0A%20%20%20%20%20%20%20%20if%20i%20%25%203%20%3D%3D%200%20%26%26%20i%20%25%205%20%3D%3D%200%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%7B%7D%20%E2%86%92%20FizzBuzz%22%2C%20i%29%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20if%20i%20%25%203%20%3D%3D%200%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%7B%7D%20%E2%86%92%20Fizz%22%2C%20i%29%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20if%20i%20%25%205%20%3D%3D%200%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%7B%7D%20%E2%86%92%20Buzz%22%2C%20i%29%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%7B%7D%22%2C%20i%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D"
+  target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

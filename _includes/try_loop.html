@@ -1,0 +1,79 @@
+<div class="try-box">
+  <p><strong>💡 Challenge 1: 🎲 Dice Roller Until 6</strong> <br>
+    Simulate rolling a dice using random numbers. Keep looping until you get a 🎲 six. Track the number of attempts. Can you guess how lucky you are?
+  </p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">use rand::Rng;
+
+fn main() {
+    let mut a = 0; //a: attempts
+
+    loop {
+        let r = rand::thread_rng().gen_range(1..=6); //r: roll
+        a += 1;
+        println!("🎲 You rolled: {}", r);
+
+        if r == 6 {
+            println!("You got a 6 in {} attempts!", a);
+            break;
+        }
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20rand%3A%3ARng%3B%0A%0Afn%20main%28%29%20%7B%0A%20%20%20%20let%20mut%20a%20%3D%200%3B%20%2F%2Fa%3A%20attempts%0A%0A%20%20%20%20loop%20%7B%0A%20%20%20%20%20%20%20%20let%20r%20%3D%20rand%3A%3Athread_rng%28%29.gen_range%281..%3D6%29%3B%20%2F%2Fr%3A%20roll%0A%20%20%20%20%20%20%20%20a%20%2B%3D%201%3B%0A%20%20%20%20%20%20%20%20println%21%28%22%F0%9F%8E%B2%20You%20rolled%3A%20%7B%7D%22%2C%20r%29%3B%0A%0A%20%20%20%20%20%20%20%20if%20r%20%3D%3D%206%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22You%20got%20a%206%20in%20%7B%7D%20attempts%21%22%2C%20a%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20break%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D"
+ target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+
+  <hr style="margin: 2em 0; border: none; border-top: 1px solid #eee;" />
+
+  <p><strong>💡 Challenge 2: 💧Simulate a Water Cycle</strong> <br> 
+    Print the 4 stages of the water cycle – evaporation, condensation, precipitation, collection – in order, and loop the full cycle 3 times. Use an array and a 	loop!
+  </p> 
+
+  <p>⏳ Try writing this on your own before looking at the solution!</p> 
+    
+  <details style="margin-top: 0.8em;"> 
+     <summary 
+        style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;" 
+        onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+        onmouseout="this.style.color='#222'; this.style.background='transparent';"> 
+        ✅ Show Solution
+     </summary> <pre><code class="language-rust">fn main() {
+    let s = ["Evaporation 🌫", "Condensation ☁️", "Precipitation 🌧", "Collection 💧"]; //s: stages
+    let mut c = 0; //c:count
+
+    loop {
+        println!("Cycle {}:", c + 1);
+        for stage in &s {
+          println!(" → {}", stage);
+        }
+
+        c += 1;
+        // You can change 'c' to simulate more rounds.try 5, 10… but beware: too many cycles = water overload! 🌊
+        if c == 3 {  
+          println!("🌍 3 cycles completed. Simulation ends.");
+          break;
+        }
+        println!("--- Repeating the water cycle ---\n");
+      }
+  }</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=fn%20main%28%29%20%7B%0A%20%20%20%20let%20s%20%3D%20%5B%22Evaporation%20%F0%9F%8C%AB%22%2C%20%22Condensation%20%E2%98%81%EF%B8%8F%22%2C%20%22Precipitation%20%F0%9F%8C%A7%22%2C%20%22Collection%20%F0%9F%92%A7%22%5D%3B%20%2F%2Fs%3A%20stages%0A%20%20%20%20let%20mut%20c%20%3D%200%3B%20%2F%2Fc%3Acount%0A%0A%20%20%20%20loop%20%7B%0A%20%20%20%20%20%20%20%20println%21%28%22Cycle%20%7B%7D%3A%22%2C%20c%20%2B%201%29%3B%0A%20%20%20%20%20%20%20%20for%20stage%20in%20%26s%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%20%E2%86%92%20%7B%7D%22%2C%20stage%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20c%20%2B%3D%201%3B%0A%20%20%20%20%20%20%20%20%2F%2F%20You%20can%20change%20%27c%27%20to%20simulate%20more%20rounds.try%205%2C%2010%E2%80%A6%20but%20beware%3A%20too%20many%20cycles%20%3D%20water%20overload%21%20%F0%9F%8C%8A%0A%20%20%20%20%20%20%20%20if%20c%20%3D%3D%203%20%7B%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20println%21%28%22%F0%9F%8C%8D%203%20cycles%20completed.%20Simulation%20ends.%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20break%3B%0A%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20println%21%28%22---%20Repeating%20the%20water%20cycle%20---%5Cn%22%29%3B%0A%20%20%20%20%7D%0A%7D"
+ target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>
+
+

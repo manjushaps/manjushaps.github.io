@@ -1,0 +1,84 @@
+<div class="try-box">
+  <p><strong>💡 Challenge 1: 🔢 Factorial with Recursion</strong> <br>
+    Ask the user for a number, and write a <code>recursive function</code> that returns its factorial.<br>
+    Base case: if 0 → return 1.<br>
+    Recursive case: <code>n × factorial(n - 1)</code>
+  </p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">use std::io;
+
+fn main() {
+    println!("🔢 Enter a number to find its factorial:");
+
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+
+    let num: u32 = input.trim().parse().expect("Please enter a valid number");
+
+    let result = factorial(num);
+    println!("Factorial of {} is {}", num, result);
+}
+
+// Recursive function to calculate factorial
+fn factorial(n: u32) -> u32 {
+    if n == 0 {
+        1
+    } else {
+        n * factorial(n - 1)
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=%0Ause%20std%3A%3Aio%3B%0A%0Afn%20main%28%29%20%7B%0A%20%20%20%20println%21%28%22%F0%9F%94%A2%20Enter%20a%20number%20to%20find%20its%20factorial%3A%22%29%3B%0A%0A%20%20%20%20let%20mut%20input%20%3D%20String%3A%3Anew%28%29%3B%0A%20%20%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20input%29.expect%28%22Failed%20to%20read%20input%22%29%3B%0A%0A%20%20%20%20let%20num%3A%20u32%20%3D%20input.trim%28%29.parse%28%29.expect%28%22Please%20enter%20a%20valid%20number%22%29%3B%0A%0A%20%20%20%20let%20result%20%3D%20factorial%28num%29%3B%0A%20%20%20%20println%21%28%22Factorial%20of%20%7B%7D%20is%20%7B%7D%22%2C%20num%2C%20result%29%3B%0A%7D%0A%0A%2F%2F%20Recursive%20function%20to%20calculate%20factorial%0Afn%20factorial%28n%3A%20u32%29%20-%3E%20u32%20%7B%0A%20%20%20%20if%20n%20%3D%3D%200%20%7B%0A%20%20%20%20%20%20%20%201%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20n%20%2A%20factorial%28n%20-%201%29%0A%20%20%20%20%7D%0A%7D%0A"
+  target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+
+  <hr style="margin: 2em 0; border: none; border-top: 1px solid #eee;" />
+
+  <p><strong>💡 Challenge 2: 🔡 Reverse a String</strong> <br> 
+    Ask the user for a word or sentence. Write a function that takes a <code>&str</code> and returns it reversed.<br>
+    Use: <code>s.chars().rev().collect()</code>
+  </p> 
+
+  <p>⏳ Try writing this on your own before looking at the solution!</p> 
+    
+  <details style="margin-top: 0.8em;"> 
+     <summary 
+        style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;" 
+        onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+        onmouseout="this.style.color='#222'; this.style.background='transparent';"> 
+        ✅ Show Solution
+     </summary> <pre><code class="language-rust">use std::io;
+
+fn main() {
+    println!("🔁 Enter a word or sentence to reverse:");
+
+    let mut i = String::new(); //i: input
+    io::stdin().read_line(&mut i).expect("Failed to read input");
+
+    let og = i.trim(); //og: original string
+    let rev = reverse_string(og); //rev: reversed string
+    println!("🔄 Reversed: {}", rev);
+}
+
+// Function to reverse a string
+fn reverse_string(s: &str) -> String {
+    s.chars().rev().collect()
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=use%20std%3A%3Aio%3B%0A%0Afn%20main%28%29%20%7B%0A%20%20%20%20println%21%28%22%F0%9F%94%81%20Enter%20a%20word%20or%20sentence%20to%20reverse%3A%22%29%3B%0A%0A%20%20%20%20let%20mut%20i%20%3D%20String%3A%3Anew%28%29%3B%20%2F%2Fi%3A%20input%0A%20%20%20%20io%3A%3Astdin%28%29.read_line%28%26mut%20i%29.expect%28%22Failed%20to%20read%20input%22%29%3B%0A%0A%20%20%20%20let%20og%20%3D%20i.trim%28%29%3B%20%2F%2Fog%3A%20original%20string%0A%20%20%20%20let%20rev%20%3D%20reverse_string%28og%29%3B%20%2F%2Frev%3A%20reversed%20string%0A%20%20%20%20println%21%28%22%F0%9F%94%84%20Reversed%3A%20%7B%7D%22%2C%20rev%29%3B%0A%7D%0A%0A%2F%2F%20Function%20to%20reverse%20a%20string%0Afn%20reverse_string%28s%3A%20%26str%29%20-%3E%20String%20%7B%0A%20%20%20%20s.chars%28%29.rev%28%29.collect%28%29%0A%7D%0A"
+  target="_blank" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>
