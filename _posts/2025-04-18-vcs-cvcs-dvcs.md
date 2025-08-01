@@ -3,7 +3,7 @@ layout: default
 title: "Version Control: The Backbone of Modern Development"
 date: 2025-04-18
 author: manjushaps
-categories: VCS and DVCS
+categories: [Technical, VCS and DVCS]
 tags: [Git, Git Series, Version Control, DVCS, Beginners]
 redirect_from:
   - /vcs/and/dvcs/2025/04/18/vcs-cvcs-dvcs/

@@ -3,7 +3,7 @@ layout: default
 title: "Git Series: Part 2 - Remote repository - GitHub"
 date: 2025-04-25
 author: manjushaps
-categories: Git 
+categories: [Technical, Git] 
 tags: [Git Series, Git, GitHub, Remote Repository, Workflow]
 redirect_from:
   - /git/2025/04/25/Git-Series-Part-2/

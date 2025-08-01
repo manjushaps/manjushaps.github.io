@@ -3,7 +3,7 @@ layout: default
 title: "Book Series - Meditations: Book One"
 date: 2025-06-06
 author: manjushaps
-categories: Book
+categories: Books
 tags: [Meditations, Stoicism, Philosophy, Book One, Self-Reflection, Marcus Aurelius]
 redirect_from:
   - /book/2025/06/06/Book-Series-Book-1/

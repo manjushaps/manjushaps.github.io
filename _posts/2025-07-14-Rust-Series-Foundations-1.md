@@ -3,7 +3,7 @@ layout: default
 title: "Rust Basics Explained: Smarter Code with Control Flow and Functions"
 date: 2025-07-14
 author: manjushaps
-categories: [Rust, Programming]
+categories: [Technical, Rust, Programming]
 tags: [rust, rustlang, vscode, for, if, while, functions, match, systems-programming]
 ---
 

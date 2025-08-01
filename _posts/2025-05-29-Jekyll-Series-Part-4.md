@@ -3,7 +3,7 @@ layout: default
 title: "Jekyll Series: Part 4 - LiveBlog: A Practical Example"
 date: 2025-05-29
 author: manjushaps
-categories: Jekyll
+categories: [Technical, Jekyll]
 tags: [Jekyll, Blogging, GitHub Pages, Live Example, Customization, Workflow]
 redirect_from:
   - /jekyll/2025/05/29/Jekyll-Series-Part-4/

@@ -3,7 +3,7 @@ layout: default
 title: "Start Rust Right: Clean Setup on Windows with Cargo + VS Code"
 date: 2025-06-27
 author: manjushaps
-categories: [Rust, Programming]
+categories: [Technical, Rust, Programming]
 tags: [rust, rustlang, windows, vscode, installation, beginner, cargo, rustup, systems-programming]
 redirect_from:
   - /rust/programming/2025/06/27/Rust-Series-Installation/

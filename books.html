@@ -1,0 +1,12 @@
+---
+layout: default
+title: Books
+permalink: /books/
+---
+
+<h1>Books</h1>
+<ul>
+  {% for post in site.categories.Books %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date: "%B %d, %Y" }}</li>
+  {% endfor %}
+</ul>

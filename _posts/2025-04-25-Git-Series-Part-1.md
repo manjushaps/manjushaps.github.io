@@ -3,7 +3,7 @@ layout: default
 title: "Git Series: Part 1 - Local Version Control"
 date: 2025-04-25
 author: manjushaps
-categories: Git 
+categories: [Technical, Git] 
 tags: [Git, Git Series, Version Control, Local Repository, Beginners]
 redirect_from:
   - /git/2025/04/25/Git-Series-Part-1/

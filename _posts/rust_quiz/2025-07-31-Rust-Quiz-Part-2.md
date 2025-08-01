@@ -3,7 +3,7 @@ layout: default
 title: "Rust Quiz – Part 2: Control Flow, Functions and GUI"
 date: 2025-07-31
 author: manjushaps
-categories: [Rust Programming, Quiz]
+categories: [Quiz, Rust Programming]
 tags: [rust, quiz, control flow, function, GUI , egui]
 ---
 

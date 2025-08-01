@@ -3,7 +3,7 @@ layout: default
 title: "Jekyll Series: Part 2 - Build and Preview Jekyll Site Locally"
 date: 2025-05-15
 author: manjushaps
-categories: Jekyll
+categories: [Technical, Jekyll]
 tags: [Jekyll, Local Development, Blogging, Preview Site, CLI, Jekyll Basics]
 redirect_from:
   - /jekyll/2025/05/15/Jekyll-Series-Part-2/

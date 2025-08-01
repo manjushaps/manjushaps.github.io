@@ -3,7 +3,7 @@ layout: default
 title: "Rust Basics Explained : Variables, Shadowing & Data Types with Real Examples"
 date: 2025-07-04
 author: manjushaps
-categories: [Rust, Programming]
+categories: [Technical, Rust, Programming]
 tags: [rust, rustlang, windows, vscode, variables, mutability, datatypes, shadowing, systems-programming]
 ---
 

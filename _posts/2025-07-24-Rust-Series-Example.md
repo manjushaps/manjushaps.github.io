@@ -3,7 +3,7 @@ layout: default
 title: "Build a Student Analyzer GUI App in Rust using Egui with CSV Export"
 date: 2025-07-24
 author: manjushaps
-categories: [Rust Programming, GUI Development]
+categories: [Technical, Rust Programming, GUI Development]
 tags: [rust, eframe, egui, gui, csv, student analyzer, desktop app, rust-projects]
 ---
 

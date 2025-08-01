@@ -90,6 +90,50 @@ blockquote p {
   box-shadow: 0 2px 5px rgba(0,0,0,0.04);
 }
 
+/*Tabs Navigation - always at the top*/
+.tabs-nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabs-nav li {
+  list-style: none;
+}
+
+.tabs-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #b40000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.tabs-nav a:hover {
+  background-color: #ffecec;
+}
+
+.tabs-nav a.active {
+  border-bottom: 2px solid crimson;
+  color: crimson;
+}
+
+/*About-me footer*/
+.about-footer {
+  border-top: 1px solid #ccc;
+  margin-top: 2em;
+  padding-top: 1em;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.0em;
+  color: #131f5f;
+}
+
+
+
 
 
 

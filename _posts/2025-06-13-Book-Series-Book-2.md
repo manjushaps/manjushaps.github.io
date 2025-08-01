@@ -3,7 +3,7 @@ layout: default
 title: "Book Series - Meditations: Book Two"
 date: 2025-06-13
 author: manjushaps
-categories: Book
+categories: Books
 tags: [Meditations, Stoicism, Philosophy, Book Two, Wisdom, Inner Life]
 redirect_from:
   - /book/2025/06/13/Book-Series-Book-2/

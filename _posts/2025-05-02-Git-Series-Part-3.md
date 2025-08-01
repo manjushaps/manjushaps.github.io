@@ -3,7 +3,7 @@ layout: default
 title: "Git Series: Part 3 - Branching and Merging"
 date: 2025-05-02
 author: manjushaps
-categories: Git 
+categories: [Technical, Git] 
 tags: [Git, Git Series, Branching, Merging, Workflow]
 redirect_from:
   - /git/2025/05/02/Git-Series-Part-3/
