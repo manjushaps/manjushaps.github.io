@@ -341,6 +341,6 @@ Borrowing and ownership together form the backbone of Rust’s memory safety gua
 
 ## 🔄 What’s Next on Techn0tz?
 In the next post, we’ll explore:
-> **Lifetimes in Rust –  The Art of Keeping Borrows Alive**
+> **Cracking Rust Lifetimes – Learn Borrowing & Explicit Rules the Easy Way**
 
 
