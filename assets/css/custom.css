@@ -132,6 +132,50 @@ blockquote p {
   color: #131f5f;
 }
 
+.about-footer p{
+  margin-bottom: 8px !important;
+}
+
+/* Container */
+.social-links {
+  display: flex;
+  gap: 15px; /* space between icons */
+  justify-content: center; /* center horizontally */
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Anchor (icon buttons) */
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* round buttons */
+  font-size: 20px;
+  color: #fff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* LinkedIn button */
+.social-links a.btn-linkedin {
+  background-color: #0a66c2;
+}
+
+/* Dev.to button */
+.social-links a.btn-devto {
+  background-color: #0A0A0A;
+}
+
+/* Hover effects */
+.social-links a:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+
 
 
 
