@@ -431,7 +431,7 @@ With these concepts in your toolkit, you can confidently interpret compiler mess
 ---
 
 ## 🔜 Next on 🚀Techn0tz!
-We’ll put ownership, borrowing, and lifetimes into action with a hands-on **Mini Word Analyzer** — see these concepts come alive in real Rust code.
+We’ll put Rust’s GUI design, state management, and CSV-based storage into action with a hands-on **Teacher Assistant App** — watch these concepts come alive in real Rust code.
 
 ***Stay Tuned!!***
 
