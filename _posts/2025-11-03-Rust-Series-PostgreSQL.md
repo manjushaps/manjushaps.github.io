@@ -32,7 +32,7 @@ Before we can design our database or connect it to Rust, we first need to set up
 
 Before starting, download the latest version of PostgreSQL for your operating system from the official website:
 
-**🔗 [https://www.enterprisedb.com/downloads/postgres-postgresql-downloads](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)**
+<a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads" target="_blank" rel="noopener noreferrer"><strong>🔗 https://www.enterprisedb.com/downloads/postgres-postgresql-downloads</strong></a>
 
 > For this guide, I’ve used **PostgreSQL 18 on Windows**, but the steps work similarly across macOS and Linux.
 
