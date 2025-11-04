@@ -28,6 +28,16 @@ Let’s begin by **installing PostgreSQL** and setting up our environment — th
 
 Before we can design our database or connect it to Rust, we first need to set up PostgreSQL locally. Let’s get our system ready.
 
+### 📥 Download PostgreSQL
+
+Before starting, download the latest version of PostgreSQL for your operating system from the official website:
+
+**🔗 [https://www.enterprisedb.com/downloads/postgres-postgresql-downloads](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)**
+
+> For this guide, I’ve used **PostgreSQL 18 on Windows**, but the steps work similarly across macOS and Linux.
+
+Once PostgreSQL is installed, let’s verify that it’s working correctly by connecting to the SQL shell (psql).
+
 ### 🛠️ PostgreSQL Installation
 
 The images below walk through each stage — from installation to successful connection.
