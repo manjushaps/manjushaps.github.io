@@ -22,6 +22,10 @@ In the next part, we’ll make this structure think for itself by adding **trigg
 
 Let’s begin by **installing PostgreSQL** and setting up our environment — the foundation that powers everything we’ll build next.
 
+<div style="background:#ebebeb; border-left:4px solid #999; padding:10px 14px; border-radius:6px; margin-top:10px; line-height:1.6;">
+  📝 <strong>Note:</strong> All data and names used in this demonstration are fictional and for illustrative purposes only.
+</div>
+
 ---
 
 ## 💡 Setup and Verifying PostgreSQL 
