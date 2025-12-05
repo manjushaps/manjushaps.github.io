@@ -53,7 +53,7 @@ Java/Scala/Kotlin power large distributed systems, but:
 
 *Good for orchestration, not for fine-grained compute paths*
 
-### Modern workloads outgrew the languages they were born in.
+### Modern Workloads Outgrew Their Languages
 Today’s infrastructure needs:
 
 - C++-level speed
