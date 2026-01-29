@@ -1,7 +1,6 @@
-const questions = [
+const quiz2 = [
 // We'll fill these in together next: each item will include
 // { question: "", options: [], answer: "", explanation: "" }
-//----------------SECTION C: Control Flow – Clever Twists(Q11–15)-----------------
   {
     question: `Output Puzzle  
 <pre><code>rust
@@ -15,7 +14,7 @@ fn main(){
 </code></pre>
 What is the output?`,
     options: ["121", "112", "123", "11"],
-    answer: "112",
+    answer: 1,
     explanation: "`The outer loop runs i from 1 to 2.\n\nWhen i = 1: inner loop runs once → prints 1.\n\nWhen i = 2: inner loop runs j = 1, 2 → prints 12.\n\nCombined output: 1 + 12 = 112`",
     type: "mcq"
   },
@@ -38,7 +37,7 @@ Why does this cause a warning?`,
       "loop requires return",
       "Line after break is unreachable"
     ],
-    answer: "Line after break is unreachable",
+    answer: 3,
     explanation: "The \`println!\` is placed after \`break\`, so it will never execute. Rust warns that the line is unreachable.",
     type: "mcq"
   },
@@ -59,7 +58,7 @@ fn main(){
       "1 3 5 7 9",
       "0 2 4 6 8 10"
     ],
-    answer: "0 2 4 6 8 10",
+    answer: 3,
     explanation: "The range is 0..=10, which includes 10. Only even numbers are printed → 0, 2, 4, 6, 8, 10.",
     type: "mcq"
   },
@@ -82,7 +81,7 @@ fn main(){
       "prints \"Workday\" with no warnings",
       "prints \"Late Week\" with no warnings"
     ],
-    answer: "prints \"Workday\" with a overlap warning",
+    answer: 0,
     explanation: "Since 5 is in both 1..=5 and 5..=7, Rust matches the first arm and prints `Workday`, but warns about overlapping match ranges.",
     type: "mcq"
   },
@@ -99,11 +98,11 @@ fn main(){
 }
 </code></pre>`,
     options: ["15", "5", "10", "0"],
-    answer: "10",
+    answer: 2,
     explanation: "The loop breaks immediately with \`x * 2 = 10\`, and assigns it to result.",
     type: "mcq"
   },
-  //-----------------SECTION D: Functions – Reasoning & Recursion (Q16–20)---------------
+  
   {
   question: `Predict the Return  
 <pre><code>rust
@@ -116,7 +115,7 @@ fn triple(x: i32) -> i32 {
 </code></pre>
 Which function ends with an explicit return?`,
   options: ["double", "triple", "Both", "Neither"],
-  answer: "triple",
+  answer: 1,
   explanation: "In Rust, the absence of a ; means an implicit return.\n\ndouble uses an implicit return (x * 2).\n\ntriple uses an explicit return with the return keyword.\n\nThe question specifically asks for an explicit return.",
   type: "mcq"
   },
@@ -129,7 +128,7 @@ fn greet(______) {
 </code></pre>
 What goes in the blank to accept a name?`,
   options: ["&name: str", "name: str", "name: &str", "name: String"],
-  answer: "name: &str",
+  answer: 2,
   explanation: "The function wants to borrow a string slice, not take ownership.\n\n`&str` is a common and efficient way to pass read-only string data.\n\nSo, the complete header becomes: \`fn greet(name: &str)\`.",
   type: "mcq"
   },
@@ -146,7 +145,7 @@ fn factorial(n: u32) -> u32 {
 </code></pre>  
 What happens if \`factorial(-1)\` is called?`,
   options: ["Returns 1", "Panics at compile time", "Returns 0", "Compile-time error – mismatched types"],
-  answer: "Compile-time error – mismatched types",
+  answer: 3,
   explanation: "`-1` is an `i32`, while the function expects `u32`. The compiler throws a type mismatch error.",
   type: "mcq"
   },
@@ -163,7 +162,7 @@ fn value() -> i32 {
 </code></pre>
 What will be printed?`,
   options: ["10", "20", "5", "Error"],
-  answer: "10",
+  answer: 0,
   explanation: "The `if` condition is true, so `return 10;` is executed, and `20` is below `if`, it's never reached.",
   type: "mcq"
   },
@@ -171,11 +170,11 @@ What will be printed?`,
   question: `Short Answer – Use of \`->\`  
 What does the arrow \`->\` mean in a function signature?`,
   options: ["Function type", "Reference", "Ownership", "Return type"],
-  answer: "Return type",
+  answer: 3,
   explanation: "In Rust, `->` specifies the return type of a function.\n\nExample: \`fn square(n: i32) -> i32\` says the function returns an i32.",
   type: "mcq"
   },
-  //--------------------SECTION E: GUI with eframe + egui (Q21–25)-----------------
+  
   {
   question: `Behavior Logic  
 <pre><code>rust
@@ -185,7 +184,7 @@ if ui.button("Add").clicked() {
 </code></pre>
 If \`.clicked()\` is removed, what happens?`,
   options: ["Button disappears", "Nothing happens", "Code runs every frame", "App closes"],
-  answer: "Code runs every frame",
+  answer: 2,
   explanation: "Without `.clicked()`, the button creation itself becomes an immediate expression, and the block executes on every frame.",
   type: "mcq"
   },
@@ -199,7 +198,7 @@ if self.name.is_empty() {
 </code></pre> 
 What happens when the user clears the text field?`,
   options: ["App crashes", "Nothing happens", "A warning label is shown", "Button is disabled"],
-  answer: "A warning label is shown",
+  answer: 2,
   explanation: "When `self.name` is empty, the condition is true, and `ui.label()` shows the message.",
   type: "mcq"
   },
@@ -210,7 +209,7 @@ ui.____(&mut self.age);
 </code></pre>  
 Which widget fits to accept numeric input?`,
   options: ["checkbox", "add(DragValue::new(&mut self.age))", "text_edit_multiline", "button"],
-  answer: "add(DragValue::new(&mut self.age))",
+  answer: 1,
   explanation: "`DragValue` is used in `egui` to input or increment numbers with a slider/spinner.",
   type: "mcq"
   },
@@ -218,7 +217,7 @@ Which widget fits to accept numeric input?`,
   question: `Concept Logic  
 In eframe, the \`update()\` function runs:`,
   options: ["Every frame / tick", "Only on user input", "Once at start", "Only after clear()"],
-  answer: "Every frame / tick",
+  answer: 0,
   explanation: "`update()` is the heart of the eframe app and runs continuously every frame to redraw the UI.",
   type: "mcq"
   },
@@ -231,11 +230,11 @@ if ui.button("Show").clicked() {
 </code></pre>  
 Why might \`self.name\` print an empty string?`,
   options: ["ui.label is not used", "Rust doesn't support printing", "self.name was never modified", "name is a reserved word"],
-  answer: "self.name was never modified",
+  answer: 2,
   explanation: "If the user didn't type anything or `text_edit_singleline()` was missing, `self.name` remains empty.",
   type: "mcq"
   }
 ];
 
-renderQuiz(2);
+renderQuiz(quiz2, quiz2sectionTitles, [5]);
 setupStartOnInteraction();
