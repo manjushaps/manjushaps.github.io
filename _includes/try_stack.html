@@ -1,0 +1,35 @@
+<div class="try-box">
+  <p>Push 5 values, pop them twice and print the final stack. What will be the output?</p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">
+
+fn main() {
+    let mut stack = Vec::new();
+
+    // push 5 values using a loop
+    for i in 1..=5 {
+        stack.push(i * 10);
+    }
+
+    // pop twice
+    stack.pop();
+    stack.pop();
+
+    println!("{:?}", stack);
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&code=fn+main%28%29+%7B%0D%0A++++let+mut+stack+%3D+Vec%3A%3Anew%28%29%3B%0D%0A%0D%0A++++%2F%2F+push+5+values+using+a+loop%0D%0A++++for+i+in+1..%3D5+%7B%0D%0A++++++++stack.push%28i+*+10%29%3B%0D%0A++++%7D%0D%0A%0D%0A++++%2F%2F+pop+twice%0D%0A++++stack.pop%28%29%3B%0D%0A++++stack.pop%28%29%3B%0D%0A%0D%0A++++println%21%28%22%7B%3A%3F%7D%22%2C+stack%29%3B%0D%0A%7D"
+  target="_blank" rel="noopener noreferrer" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

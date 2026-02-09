@@ -1,0 +1,41 @@
+<div class="try-box">
+  <p>&bull; Add 4 numbers using push_back()<br>   
+    &bull; Remove one using pop_front()<br>    
+    &bull; Add one more<br>    
+    &bull; Print the final queue<br>    
+    <strong>What order do you expect?</strong></p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">use std::collections::VecDeque;
+
+fn main() {
+    let mut queue = VecDeque::new();
+
+    // push 4 values using a loop
+    for i in 1..=4 {
+        queue.push_back(i * 10);
+    }
+
+    // pop the first value
+    queue.pop_front();
+
+    //push one more value
+    queue.push_back(50);
+
+    println!("{:?}", queue);
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&code=use+std%3A%3Acollections%3A%3AVecDeque%3B%0D%0A%0D%0Afn+main%28%29+%7B%0D%0A++++let+mut+queue+%3D+VecDeque%3A%3Anew%28%29%3B%0D%0A%0D%0A++++%2F%2F+push+4+values+using+a+loop%0D%0A++++for+i+in+1..%3D4+%7B%0D%0A++++++++queue.push_back%28i+*+10%29%3B%0D%0A++++%7D%0D%0A%0D%0A++++%2F%2F+pop+the+first+value%0D%0A++++queue.pop_front%28%29%3B%0D%0A%0D%0A++++%2F%2Fpush+one+more+value%0D%0A++++queue.push_back%2850%29%3B%0D%0A%0D%0A++++println%21%28%22%7B%3A%3F%7D%22%2C+queue%29%3B%0D%0A%7D"
+  target="_blank" rel="noopener noreferrer" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

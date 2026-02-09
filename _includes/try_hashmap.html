@@ -1,0 +1,42 @@
+<div class="try-box">
+  <p>&bull; Insert 4 subjects with their marks<br>
+    &bull; Fetch one subject using <strong>.get()</strong><br>
+    &bull; Print the result<br>
+    &bull; <em>Example idea: </em><code>"Math" → 95</code><br>
+    <code>"Science" → 88</code><br>   
+    <strong>Can u retrieve just the English mark?</strong></p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">use std::collections::HashMap;
+
+fn main() {
+    let mut marks = HashMap::new();
+
+    marks.insert("Math", 95);
+    marks.insert("Science", 88);
+    marks.insert("English", 90);
+    marks.insert("History", 85);
+
+    let mark = marks.get("English");
+    
+    println!("Raw result from Hashmap: {:?}", mark);
+    
+    if let Some(number) = mark{
+        println!("The Actual mark: {}", number)
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&code=use+std%3A%3Acollections%3A%3AHashMap%3B%0D%0A%0D%0Afn+main%28%29+%7B%0D%0A++++let+mut+marks+%3D+HashMap%3A%3Anew%28%29%3B%0D%0A%0D%0A++++marks.insert%28%22Math%22%2C+95%29%3B%0D%0A++++marks.insert%28%22Science%22%2C+88%29%3B%0D%0A++++marks.insert%28%22English%22%2C+90%29%3B%0D%0A++++marks.insert%28%22History%22%2C+85%29%3B%0D%0A%0D%0A++++let+mark+%3D+marks.get%28%22English%22%29%3B%0D%0A++++%0D%0A++++println%21%28%22Raw+result+from+Hashmap%3A+%7B%3A%3F%7D%22%2C+mark%29%3B%0D%0A++++%0D%0A++++if+let+Some%28number%29+%3D+mark%7B%0D%0A++++++++println%21%28%22The+Actual+mark%3A+%7B%7D%22%2C+number%29%0D%0A++++%7D%0D%0A%7D%0D%0A"
+  target="_blank" rel="noopener noreferrer" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

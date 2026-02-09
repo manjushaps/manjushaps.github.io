@@ -1,0 +1,37 @@
+<div class="try-box">
+  <p>&bull; Create a vector with numbers [40, 10, 70, 20, 90, 50]<br>
+    &bull; Sort it <br>
+    &bull; Print the sorted numbers<br>
+    &bull; Search for 40 using binary_search()<br> 
+    &bull; Print the index</p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">
+
+fn main() {
+    let mut nums = vec![40, 10, 70, 20, 90, 50];
+
+    nums.sort();
+
+    println!("Sorted: {:?}", nums);
+
+    match nums.binary_search(&40) {
+        Ok(index) => println!("Found at index {}", index),
+        Err(_) => println!("Not found"),
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&code=fn+main%28%29+%7B%0D%0A++++let+mut+nums+%3D+vec%21%5B40%2C+10%2C+70%2C+20%2C+90%2C+50%5D%3B%0D%0A%0D%0A++++nums.sort%28%29%3B%0D%0A++++%0D%0A++++println%21%28%22Sorted%3A+%7B%3A%3F%7D%22%2C+nums%29%3B%0D%0A%0D%0A++++match+nums.binary_search%28%2640%29+%7B%0D%0A++++++++Ok%28index%29+%3D%3E+println%21%28%22Found+at+index+%7B%7D%22%2C+index%29%2C%0D%0A++++++++Err%28_%29+%3D%3E+println%21%28%22Not+found%22%29%2C%0D%0A++++%7D%0D%0A%7D%0D%0A"
+  target="_blank" rel="noopener noreferrer" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

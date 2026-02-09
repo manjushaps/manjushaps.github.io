@@ -1,0 +1,37 @@
+<div class="try-box">
+  <p>&bull; Insert 5 subjects with their marks<br>
+    &bull; Print them using a loop<br>
+    &bull; Check if the output is sorted by subject name<br> 
+    <strong>What order do you expect?</strong></p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">use std::collections::BTreeMap;
+
+fn main() {
+    let mut marks = BTreeMap::new();
+
+    marks.insert("Science", 95);
+    marks.insert("Maths", 100);
+    marks.insert("English", 90);
+    marks.insert("Social", 80);
+    marks.insert("Language", 88);
+
+    for (subject, mark) in &marks {
+        println!("{} -> {}", subject, mark);
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&code=use+std%3A%3Acollections%3A%3ABTreeMap%3B%0D%0A%0D%0Afn+main%28%29+%7B%0D%0A++++let+mut+marks+%3D+BTreeMap%3A%3Anew%28%29%3B%0D%0A%0D%0A++++marks.insert%28%22Science%22%2C+95%29%3B%0D%0A++++marks.insert%28%22Maths%22%2C+100%29%3B%0D%0A++++marks.insert%28%22English%22%2C+90%29%3B%0D%0A++++marks.insert%28%22Social%22%2C+80%29%3B%0D%0A++++marks.insert%28%22Language%22%2C+88%29%3B%0D%0A%0D%0A++++for+%28subject%2C+mark%29+in+%26marks+%7B%0D%0A++++++++println%21%28%22%7B%7D+-%3E+%7B%7D%22%2C+subject%2C+mark%29%3B%0D%0A++++%7D%0D%0A%7D%0D%0A"
+  target="_blank" rel="noopener noreferrer" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

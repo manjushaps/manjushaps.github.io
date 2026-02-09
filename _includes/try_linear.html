@@ -1,0 +1,43 @@
+<div class="try-box">
+  <p>&bull; Search for Riya<br>
+    &bull; Print whether she exists<br>
+    &bull; If not found, <code> println!("Student missing");</code> <br>
+    <strong>Can you modify the loop?</strong></p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">
+
+fn main() {
+    let students = vec!["Riya", "Manu", "Rose", "Anita"];
+
+    let target = "Riya";
+    let mut found = false;
+
+    for name in &students {
+        if *name == target {
+            found = true;
+            break;
+        }
+    }
+
+    if found {
+        println!("Student exists");
+    } else {
+        println!("Student missing");
+    }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&code=fn+main%28%29+%7B%0D%0A++++let+students+%3D+vec%21%5B%22Riya%22%2C+%22Manu%22%2C+%22Rose%22%2C+%22Anita%22%5D%3B%0D%0A%0D%0A++++let+target+%3D+%22Riya%22%3B%0D%0A++++let+mut+found+%3D+false%3B%0D%0A%0D%0A++++for+name+in+%26students+%7B%0D%0A++++++++if+*name+%3D%3D+target+%7B%0D%0A++++++++++++found+%3D+true%3B%0D%0A++++++++++++break%3B%0D%0A++++++++%7D%0D%0A++++%7D%0D%0A%0D%0A++++if+found+%7B%0D%0A++++++++println%21%28%22Student+exists%22%29%3B%0D%0A++++%7D+else+%7B%0D%0A++++++++println%21%28%22Student+missing%22%29%3B%0D%0A++++%7D%0D%0A%7D%0D%0A"
+  target="_blank" rel="noopener noreferrer" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

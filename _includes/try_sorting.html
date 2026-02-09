@@ -1,0 +1,41 @@
+<div class="try-box">
+  <p>Create a list of students with (name, marks) and:<br>
+    &bull; sort by marks (ascending)<br>
+    &bull; then sort by name (alphabetical)<br>
+    &bull; print both results<br>
+    <strong>Can you do it using sort_by_key() only?</strong></p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">
+
+fn main() {
+    let mut students = vec![
+        ("Riya", 88),
+        ("Manu", 95),
+        ("Rose", 78),
+        ("Anita", 90),
+    ];
+
+    // sort by marks
+    students.sort_by_key(|s| s.1);
+    println!("By marks: {:?}", students);
+
+    // sort by name
+    students.sort_by_key(|s| s.0);
+    println!("By name: {:?}", students);
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2024&code=fn+main%28%29+%7B%0D%0A++++let+mut+students+%3D+vec%21%5B%0D%0A++++++++%28%22Riya%22%2C+88%29%2C%0D%0A++++++++%28%22Manu%22%2C+95%29%2C%0D%0A++++++++%28%22Rose%22%2C+78%29%2C%0D%0A++++++++%28%22Anita%22%2C+90%29%2C%0D%0A++++%5D%3B%0D%0A%0D%0A++++%2F%2F+sort+by+marks%0D%0A++++students.sort_by_key%28%7Cs%7C+s.1%29%3B%0D%0A++++println%21%28%22By+marks%3A+%7B%3A%3F%7D%22%2C+students%29%3B%0D%0A%0D%0A++++%2F%2F+sort+by+name%0D%0A++++students.sort_by_key%28%7Cs%7C+s.0%29%3B%0D%0A++++println%21%28%22By+name%3A+%7B%3A%3F%7D%22%2C+students%29%3B%0D%0A%7D"
+  target="_blank" rel="noopener noreferrer" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>

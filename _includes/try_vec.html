@@ -1,0 +1,36 @@
+<div class="try-box">
+  <p>Add one more student name and print only students whose name starts with <strong>A</strong></p>
+
+  <p>⏳ Try writing this on your own before checking the solution!</p>
+
+  <details style="margin-top: 0.8em;">
+    <summary 
+      style="cursor: pointer; font-weight: 500; color: #222; transition: color 0.3s;"
+      onmouseover="this.style.color='#f97316'; this.style.background='#fff3e0';"
+      onmouseout="this.style.color='#222'; this.style.background='transparent';">
+      ✅ Show Solution
+    </summary>
+    <pre><code class="language-rust">
+
+fn main() {
+  let mut students = Vec::new();
+
+  //names are for illustration only//
+  students.push("Riya");
+  students.push("Anita");
+  students.push("Manu");
+  students.push("Rena");
+
+  for s in &students {
+    if s.starts_with('R'){
+      println!("{s}");
+    }
+  }
+}</code></pre>
+  </details>
+
+  <p style="margin-top: 1em;">
+    👉 <a href="https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&code=fn+main%28%29+%7B%0D%0A+++let+mut+students+%3D+Vec%3A%3Anew%28%29%3B%0D%0A%0D%0A++++%2F%2Fnames+are+for+illustration+only%2F%2F%0D%0A++++students.push%28%22Riya%22%29%3B%0D%0A++++students.push%28%22Anita%22%29%3B%0D%0A++++students.push%28%22Manu%22%29%3B%0D%0A++++students.push%28%22Rena%22%29%3B%0D%0A%0D%0A++++for+s+in+%26students+%7B%0D%0A++++++++if+s.starts_with%28%27R%27%29%7B%0D%0A++++++++++++println%21%28%22%7Bs%7D%22%29%3B%0D%0A++++++++%7D%0D%0A++++%7D%0D%0A%7D"
+  target="_blank" rel="noopener noreferrer" style="color: #dc2626; font-weight: bold;">Try it on Rust Playground</a>
+  </p>
+</div>
