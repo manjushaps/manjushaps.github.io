@@ -17,7 +17,7 @@ Rust approaches data structures a little differently compared to many other lang
 
 ---
 
-## Core Data Structures in Rust (With Runnable Examples)
+## 🧱 Core Data Structures in Rust (With Runnable Examples)
 
 Now let’s look at the data structures you’ll actually use while building real Rust applications. No heavy theory — just small runnable programs so you can copy, run, and see the behavior instantly.
 
@@ -309,7 +309,7 @@ With `HashMap`, sorting is **manual**. With `BTreeMap`, it’s **automatic**.
 
 ---
 
-## Searching Techniques
+## ⚡ Searching Techniques
 ### Linear Search (Scan One by One)
 
 Linear search is the simplest searching technique.    
@@ -430,7 +430,7 @@ If the list isn’t sorted, you must sort it first.
 
 ---
 
-## Sorting Techniques (Built-in and Practical in Rust)
+## 🔄 Sorting Techniques (Built-in and Practical in Rust)
 
 Sorting simply means arranging data in a specific order — ascending, descending, or based on a custom rule.     
 
@@ -489,7 +489,7 @@ Once sorted, we can also use **binary search** efficiently.
 
 ---
 
-## Big-O Complexity (Quick Practical View)
+## 📊 Big-O Complexity (Quick Practical View)
 
 You’ll often hear terms like O(1), O(n), or O(log n) when talking about data structures.     
 
@@ -510,7 +510,7 @@ Instead of memorizing formulas, just remember which structure is faster for whic
 
 ---
 
-## Other Useful Collections in Rust (Quick Overview)
+## 🧰 Other Useful Collections in Rust (Quick Overview)
 
 Rust also provides a few more specialized collections.     
 
@@ -528,7 +528,7 @@ For most applications, `Vec`, `HashMap`, `VecDeque`, and `BTreeMap` are more tha
 
 ---
 
-## Rust vs Other Languages – Quick Mapping
+## 🔁 Rust vs Other Languages – Quick Mapping
 
 If you’re coming from Python, Java, or C++, here’s a quick mental mapping:
 
@@ -546,7 +546,7 @@ So if you know these structures in other languages, you already know most of Rus
 
 ---
 
-# Conclusion
+# 📜 Conclusion
 
 Data structures aren’t about memorizing theory — they’re about choosing the right tool for the job. Rust already gives you fast, safe, and practical collections out of the box, so most of the time you can focus on building features instead of implementing algorithms from scratch.     
 
