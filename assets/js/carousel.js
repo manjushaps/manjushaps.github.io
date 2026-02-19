@@ -19,8 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function showImage(index) {
       current = index;
 
-      images.forEach((img, i) => {
+      /*images.forEach((img, i) => {
         img.style.display = i === current ? "block" : "none";
+      });*/
+      images.forEach((img, i) => {
+        const item = img.closest(".carousel-item") || img;
+        item.style.display = i === current ? "block" : "none";
       });
 
       updateButtons();
