@@ -10,7 +10,7 @@ tags: [rust, rustlang, project, egui, eframe, postgresql]
 # 📄 Introduction
 ***A login system is only the entry point. What follows after authentication defines how the system behaves, what data becomes visible, and which actions are allowed.***     
 
-In the previous post, <a href="https://manjushaps.github.io/Rust-Series-TA3-Login/" target="_blank" rel="noopener noreferrer"><strong>Building Login Sytem in Rust — egui + PostgreSQL</strong></a>, the Teacher Assistant application's authentication system was implemented using Rust, egui, and PostgreSQL. That phase established the foundation for verifying user identity and controlling access to the application.     
+In the previous post, <a href="https://manjushaps.github.io/Rust-Series-TA3-Login/" target="_blank" rel="noopener noreferrer"><strong>Building Login System in Rust — egui + PostgreSQL</strong></a>, the Teacher Assistant application's authentication system was implemented using Rust, egui, and PostgreSQL. That phase established the foundation for verifying user identity and controlling access to the application.     
 
 However, authentication alone does not define how the application operates. Once a user logs in, the interface and available actions must adapt based on their role. An administrator requires broader control over teachers, students, and system data, while teachers must be limited to their assigned classes and permitted student information.     
 
