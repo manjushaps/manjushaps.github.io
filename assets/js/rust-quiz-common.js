@@ -148,6 +148,7 @@ function retryQuiz() {
 function showResults() {
   const form = document.getElementById("quiz-form");
   const results = document.getElementById("results");
+  const getOptionLabel = (index) => String.fromCharCode(65 + index); //added
   let score = 0;
   results.innerHTML = "<h3>📝 Quiz Results</h3>";
 
@@ -171,8 +172,9 @@ function showResults() {
     results.innerHTML += `
       <div style="margin-bottom: 15px;">
         <p><strong>Q${index + 1}: ${q.question}</strong></p>
-        <p>Your Answer: <mark>${userInput}</mark></p>
-        <p>Correct Answer: ✅ <strong>${q.options[q.answer]}</strong></p>
+        <p>Your Answer: <mark>${userInput !== "No Answer" ? `Option ${getOptionLabel(Number(userInput))}`
+          : "No Answer"}</mark></p> 
+        <p>Correct Answer: ✅ <strong>Option ${getOptionLabel(q.answer)}</strong></p>
         <p><em>${q.explanation}</em></p>
         <hr>
       </div>
