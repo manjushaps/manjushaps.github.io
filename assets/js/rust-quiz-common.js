@@ -46,6 +46,11 @@ const quiz4sectionTitles = [
   "Rust in Real-World & Future Tech"
 ];
 
+const quiz5sectionTitles = [
+  "Easy Wins..",
+  "Think Again..",
+  "Wait...What?"
+];
 
 function renderQuiz(questions, sectionTitles = [], sectionSizes = [5]) {
   const form = document.getElementById("quiz-form");
