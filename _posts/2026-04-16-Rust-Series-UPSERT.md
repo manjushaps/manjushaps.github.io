@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Stop Checking if Records Exist: Using UPSERT in Rust to Prevent Duplicate Data"
-date: 2026-04-15
+date: 2026-04-16
 author: manjushaps
 categories: [Technical, Rust Programming]
 tags: [rust, rustlang, upsert, postgresql, sqlite]
