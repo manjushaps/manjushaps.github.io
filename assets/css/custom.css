@@ -1,3 +1,58 @@
+.anniversary-banner {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, #fff8dc, #fff3b0);
+  color: #333;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.35);
+  border-radius: 6px;
+  animation: glowFade 2.5s ease-in-out infinite alternate;
+}
+
+.anniversary-banner:hover {
+  transform: scale(1.01);
+  transition: 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowFade {
+  from {
+    box-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
+  }
+  to {
+    box-shadow: 0 0 14px rgba(255, 215, 0, 0.6);
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.cta-button:hover {
+  background-color: #444;
+}
+
 .post-nav-minimal {
   background-color: #f0f0f0; /* light grey */
   padding: 10px;

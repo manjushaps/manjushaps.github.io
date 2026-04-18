@@ -57,6 +57,12 @@
       <section>
         <!-- Tabs Navigation - always at the top -->
         {% include tabs_nav.html %}
+
+        <!-- 🎉 Anniversary Banner -->
+        <div class="anniversary-banner">
+          🎉 Techn0tz turns 1 — Thank you for being part of this journey
+        </div>
+
         <article class="post">
           {% if page.layout == "default" and page.path contains "_posts" %}
             <!-- Top navigation -->
@@ -121,5 +127,11 @@
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Your custom script -->
+    <script src="{{ '/assets/js/anniversary.js' | relative_url }}"></script>
   </body>
 </html>
