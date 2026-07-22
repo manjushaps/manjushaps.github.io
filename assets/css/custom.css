@@ -88,6 +88,11 @@ img {
   padding: 5px;
 }
 
+.contributors p {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
 /* Target only the Feedback link */
 header a[href*="/feedback/"] {
   font-size: 18px;
