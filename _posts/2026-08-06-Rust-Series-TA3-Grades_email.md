@@ -4,7 +4,7 @@ title: "Automated Student Report Delivery in Rust | Bulk Email PDF Reports"
 date: 2026-08-06
 author: manjushaps
 categories: [Technical, Rust Programming]
-tags: [rust, egui, postgresql, html, desktopapp]
+tags: [rust, egui, postgresql, html, desktopapp, gmailsmtp]
 ---
 
 # 📄 Introduction
@@ -23,7 +23,7 @@ The workflow begins with the Teacher Profile, where the sender credentials requi
 ## ⚙️ Getting the Teacher Profile Ready for Report Delivery
 Automated report delivery needs a sender identity before any email can leave the application. The Teacher Profile provides a central place to configure the sender email and credentials, so the teacher does not have to enter them again for every report delivery.
 
-For Gmail-based delivery, the application uses an **App Password** instead of the teacher’s regular Google account password. An App Password is a separate credential created specifically for application access and can be revoked independently without changing the primary account password.
+For Gmail-based delivery, the application uses an **App Password** instead of the teacher’s regular Google account password. An **App Password** is a separate credential created specifically for application access and can be revoked independently without changing the primary account password.
 
 > **Security Note:** The current development version stores the sender email and Gmail App Password locally in the profile settings file. Although an App Password keeps the primary account password separate, a production release should protect stored credentials using an operating-system credential store or another secure secrets mechanism rather than plain-text configuration.
 
