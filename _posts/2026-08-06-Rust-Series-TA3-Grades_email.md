@@ -4,7 +4,7 @@ title: "Automated Student Report Delivery in Rust | Bulk Email PDF Reports"
 date: 2026-08-06
 author: manjushaps
 categories: [Technical, Rust Programming]
-tags: [rust, egui, postgresql, html, desktopapp, gmailsmtp]
+tags: [rust, egui, postgresql, desktopapp, gmailsmtp]
 ---
 
 # 📄 Introduction
