@@ -1,0 +1,604 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* Main heading */
+h1 {
+    margin: 8px 0 24px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* App tabs */
+.section-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 1;
+    max-width: 220px;
+    padding: 13px 16px;
+    border: none;
+    border-radius: 12px;
+    background: #ddcbed;
+    color: #222;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background: #b9d9ff;
+    box-shadow: inset 0 -3px 0 #527ebc;
+}
+
+.tab-button:hover {
+    filter: brightness(0.97);
+}
+
+/* Import button */
+.primary-button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 12px;
+    background: #377bb8;
+    color: white;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #2e679c;
+}
+
+/* Keep the action centred */
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Section headings */
+h2 {
+    margin: 28px 0 16px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.demo-note,
+.sheet-help {
+    text-align: center;
+    color: #454d5c;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Hide inactive views and popup */
+.hidden {
+    display: none !important;
+}
+
+/* Footer */
+.footer-note {
+    margin-top: 24px;
+    text-align: center;
+    color: #596579;
+    font-size: 12px;
+}
+
+button,
+input,
+textarea,
+select,
+table {
+    font-family: inherit;
+}
+  
+html {
+    min-height: 100%;
+    background: #123568;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+    color: #111;
+    background: transparent;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 31% 24%,
+            rgba(104, 181, 255, 0.96) 0 27%,
+            transparent 27.2%
+        ),
+        radial-gradient(
+            circle at 68% 73%,
+            rgba(230, 244, 255, 0.88) 0 24%,
+            transparent 24.2%
+        ),
+        linear-gradient(
+            to bottom,
+            #087db7 0%,
+            #087db7 42%,
+            #07518b 42%,
+            #07518b 56%,
+            #123568 56%,
+            #123568 100%
+        );
+}
+
+.app-container {
+    width: 100%;
+    padding: 20px 16px;
+}
+
+.grades-panel {
+    width: 100%;
+    max-width: 730px;
+    min-height: 587px;
+    margin: 0 auto;
+    padding: 22px 30px 32px;
+
+    border-radius: 20px;
+    background: rgba(238, 251, 255, 0.86);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 24px rgba(14, 36, 78, 0.12);
+}
+
+
+/* Restore the centered Students table */
+#students-sheet {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#students-sheet table {
+    width: 460px;
+    max-width: 100%;
+    margin: 0 auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+#students-sheet th:first-child,
+#students-sheet td:first-child {
+    width: 130px;
+    text-align: left;
+}
+
+#students-sheet th:nth-child(2),
+#students-sheet td:nth-child(2) {
+    width: 330px;
+    text-align: left;
+}
+
+#students-sheet th,
+#students-sheet td {
+    padding: 10px;
+}
+
+#students-sheet thead {
+    border-bottom: 2px solid rgba(60, 75, 100, 0.2);
+}
+
+#students-sheet td {
+    color: #3f4651;
+    font-weight: 600;
+}
+
+#students-sheet tbody tr:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+.add-subject-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+#add-subject-button {
+    flex: initial;
+    max-width: none;
+    padding: 10px 18px;
+}
+
+
+/* Compact Excel table columns */
+#excel-sheet table {
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+    table-layout: auto;
+}
+
+/* Roll No column */
+#excel-sheet th:first-child,
+#excel-sheet td:first-child {
+    width: 105px;
+    min-width: 105px;
+    white-space: nowrap;
+    padding-right: 6px;
+}
+
+/* Name column */
+#excel-sheet th:nth-child(2),
+#excel-sheet td:nth-child(2) {
+    width: 105px;
+    min-width: 105px;
+    white-space: nowrap;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+/* Subject and marks columns */
+#excel-sheet th:nth-child(n+3),
+#excel-sheet td:nth-child(n+3) {
+    width: 105px;
+    min-width: 105px;
+    padding: 5px;
+}
+
+/* Keep inputs compact */
+#excel-sheet th input,
+#excel-sheet td input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 7px 5px;
+}
+
+
+#excel-sheet th {
+    text-align: left;
+    vertical-align: middle;
+}
+
+#excel-sheet th input {
+    text-align: left;
+}
+
+
+/* Import review modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: rgba(10, 25, 48, 0.48);
+}
+
+.modal.hidden {
+    display: none !important;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 785px;
+    max-height: 94vh;
+    overflow-y: auto;
+    padding: 16px 18px;
+    border: 1px solid #d6d6d6;
+    border-radius: 22px;
+    background: #fafafa;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+
+.modal-content > h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.modal-subtitle {
+    margin: 7px 0 22px;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.summary-heading,
+.details-heading {
+    margin: 12px 0 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.summary-tile {
+    min-height: 49px;
+    padding: 8px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.summary-tile strong {
+    font-size: 13px;
+}
+
+.summary-tile.total {
+    background: #efefef;
+    color: #555;
+}
+
+.summary-tile.valid {
+    background: #e1efff;
+    color: #2870ce;
+}
+
+.summary-tile.invalid {
+    background: #ffe7e7;
+    color: #cf3939;
+}
+
+.summary-tile.missing,
+.summary-tile.mismatch {
+    background: #fff3dc;
+    color: #bf7b16;
+}
+
+.summary-tile.format,
+.summary-tile.subjects-not-found {
+    background: #f3e9ff;
+    color: #8251b9;
+}
+
+.summary-tile.not-found {
+    background: #ffe7e7;
+    color: #cf3939;
+}
+
+.details-heading {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.details-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 10px;
+}
+
+.details-table {
+    width: 100%;
+    min-width: 580px;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.details-table th {
+    padding: 9px 6px;
+    background: #f0f3f7;
+    text-align: center;
+}
+
+.details-table th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.details-table th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.details-table td {
+    padding: 8px 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.details-table .status-valid {
+    color: #bf7b16;
+}
+
+.details-table .status-issue {
+    color: #777;
+}
+
+.details-table .expand-button {
+    border: none;
+    background: transparent;
+    color: #444;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.details-table .issue-details td {
+    text-align: left;
+    white-space: normal;
+    background: #f3f5f8;
+    color: #555;
+    font-weight: 400;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+.confirm-button,
+.cancel-button {
+    width: 170px;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 14px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.confirm-button {
+    background: #43a05b;
+    color: white;
+}
+
+.confirm-button:hover {
+    background: #37864b;
+}
+
+.cancel-button {
+    background: #eaeaea;
+    color: #111;
+}
+
+.cancel-button:hover {
+    background: #ddd;
+}
+
+
+/* Keep the Marks table centered and readable */
+#marks-sheet {
+    width: 100%;
+    overflow-x: auto;
+}
+
+#marks-sheet table {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#marks-sheet th,
+#marks-sheet td {
+    padding: 9px 10px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+#marks-sheet th:first-child,
+#marks-sheet td:first-child {
+    width: 110px;
+}
+
+#marks-sheet th:nth-child(2),
+#marks-sheet td:nth-child(2) {
+    width: 150px;
+}
+
+#marks-sheet th:nth-child(n+3),
+#marks-sheet td:nth-child(n+3) {
+    width: 110px;
+}
+
+#marks-sheet thead {
+    border-bottom: 2px solid rgba(60, 75, 100, 0.2);
+}
+
+
+/* More compact import summary popup */
+.modal-content {
+    max-width: 785px;
+    max-height: 94vh;
+    padding: 12px 16px;
+}
+
+.modal-content > h2 {
+    font-size: 22px;
+}
+
+.modal-subtitle {
+    margin-bottom: 14px;
+}
+
+.summary-heading,
+.details-heading {
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.summary-tile {
+    min-height: 45px;
+    padding: 6px 4px;
+}
+
+.details-table {
+    font-size: 12px;
+}
+
+.details-table th,
+.details-table td {
+    padding: 6px 5px;
+}
+
+.modal-actions {
+    margin-top: 18px;
+}
+
+.excel-import-section.hidden {
+    display: none !important;
+}
+
+.status-message {
+    min-height: 20px;
+    margin: 12px 0;
+    text-align: center;
+    color: #287a42;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 560px) {
+    .modal-content {
+        padding: 14px 10px;
+        border-radius: 16px;
+    }
+
+    .summary-grid {
+        gap: 5px;
+    }
+
+    .summary-tile {
+        font-size: 10px;
+        overflow-wrap: anywhere;
+    }
+
+    .modal-actions {
+        gap: 8px;
+    }
+
+    .confirm-button,
+    .cancel-button {
+        width: auto;
+        flex: 1;
+    }
+}

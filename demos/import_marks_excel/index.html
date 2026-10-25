@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Excel Marks Import | Techn0tz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app-container">
+        <section class="grades-panel">
+            <h1>Grades</h1>
+
+            <div class="section-tabs">
+                <button class="tab-button active" data-tab="students">
+                    Students
+                </button>
+                <button class="tab-button" data-tab="marks">
+                    Marks
+                </button>
+            </div>
+
+            <h2 id="sheet-heading">Students Sheet</h2>
+            <p class="demo-note">
+                Uneditable students list for demonstration.
+            </p>
+
+            <!-- Application view: Students -->
+            <div id="students-sheet" class="sheet">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="students-body"></tbody>
+                </table>
+            </div>
+
+            <!-- Application view: Marks -->
+            <div id="marks-sheet" class="sheet hidden">
+                <table>
+                    <thead id="marks-header"></thead>
+                    <tbody id="marks-body"></tbody>
+                </table>
+            </div>
+
+            <!-- Editable Excel input: separate from the app views -->
+            <section class="excel-import-section hidden">
+                <h2>Excel Sheet to Import</h2>
+                <p class="demo-note">
+                    Explore the sample Excel sheet and import the marks 
+                    to see the validation results.
+                </p>
+                <p class="sheet-help">
+                    Edit the subject names and marks below.
+                    Roll No and Name cannot be changed.
+                </p>
+
+                <div id="excel-sheet" class="sheet">
+                    <table>
+                        <thead id="excel-header"></thead>
+                        <tbody id="excel-body"></tbody>
+                    </table>
+                </div>
+
+                <div class="add-subject-action">
+                    <button id="add-subject-button" class="tab-button">
+                        + Add Subject
+                    </button>
+                </div>
+
+                <div class="actions">
+                    <button id="import-button" class="primary-button">
+                        Import Excel Marks
+                    </button>
+                </div>
+
+                <p id="status-message" class="status-message" aria-live="polite"></p>
+
+                <p class="footer-note">
+                    Interactive demonstration · Sample data only
+                </p>
+            </section>
+
+            <!-- Import validation summary -->
+
+            <div id="result-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <div class="modal-content">
+
+                    <h2 id="modal-title">Marks Import Summary</h2>
+                    <p class="modal-subtitle">
+                        Review the imported marks before saving them.
+                    </p>
+
+                    <h3 class="summary-heading">Import Summary</h3>
+
+                    <div class="summary-grid">
+                        <div class="summary-tile total">
+                            <span>TOTAL MARKS</span>
+                            <strong id="count-total">0</strong>
+                        </div>
+                        <div class="summary-tile valid">
+                            <span>VALID</span>
+                            <strong id="count-valid">0</strong>
+                        </div>
+                        <div class="summary-tile invalid">
+                            <span>INVALID</span>
+                            <strong id="count-invalid">0</strong>
+                        </div>
+                        <div class="summary-tile missing">
+                            <span>MISSING</span>
+                            <strong id="count-missing">0</strong>
+                        </div>
+                        <div class="summary-tile format">
+                            <span>FORMAT</span>
+                            <strong id="count-format">0</strong>
+                        </div>
+                        <div class="summary-tile not-found">
+                            <span>STUDENTS NOT FOUND</span>
+                            <strong id="count-not-found">0</strong>
+                        </div>
+                        <div class="summary-tile mismatch">
+                            <span>NAME MISMATCH</span>
+                            <strong id="count-mismatch">0</strong>
+                        </div>
+                        <div class="summary-tile subjects-not-found">
+                            <span>SUBJECTS NOT FOUND</span>
+                            <strong id="count-subjects-not-found">0</strong>
+                        </div>
+                    </div>
+
+                    <h3 class="details-heading">Import Details</h3>
+
+                    <div class="details-table-wrapper">
+                        <table class="details-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Roll No</th>
+                                    <th>Name</th>
+                                    <th>Subject</th>
+                                    <th>Marks</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="import-details-body"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button id="confirm-import" class="confirm-button">
+                            Import Valid Marks
+                        </button>
+                        <button id="cancel-import" class="cancel-button">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
